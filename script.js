@@ -24,6 +24,18 @@
   updateHeaderShadow();
   window.addEventListener("scroll", updateHeaderShadow, { passive: true });
 
+  // Fade out the hero scroll cue once the visitor starts scrolling
+  var scrollCue = document.querySelector(".scroll-cue");
+  if (scrollCue) {
+    window.addEventListener(
+      "scroll",
+      function () {
+        scrollCue.style.opacity = window.scrollY > 80 ? "0" : "1";
+      },
+      { passive: true }
+    );
+  }
+
   // Mobile nav toggle
   var navToggle = document.getElementById("nav-toggle");
   var navLinks = document.getElementById("nav-links");
@@ -61,6 +73,41 @@
       });
     });
   });
+
+  // Scrollspy: highlight the current section's nav link
+  var sectionIds = ["about", "criteria", "portfolio", "contact"];
+  var navAnchors = {};
+  sectionIds.forEach(function (id) {
+    var anchor = navLinks ? navLinks.querySelector('a[href="#' + id + '"]') : null;
+    if (anchor) navAnchors[id] = anchor;
+  });
+
+  var sections = sectionIds
+    .map(function (id) {
+      return document.getElementById(id);
+    })
+    .filter(Boolean);
+
+  if ("IntersectionObserver" in window && sections.length) {
+    var spyObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          var link = navAnchors[entry.target.id];
+          if (!link) return;
+          if (entry.isIntersecting) {
+            Object.keys(navAnchors).forEach(function (id) {
+              navAnchors[id].classList.remove("active");
+            });
+            link.classList.add("active");
+          }
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+    sections.forEach(function (section) {
+      spyObserver.observe(section);
+    });
+  }
 
   // Reveal sections on scroll
   var revealEls = document.querySelectorAll(".reveal");
