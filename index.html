@@ -18,6 +18,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -28,24 +33,26 @@
       <a class="logo-link" href="#top" aria-label="Mailman Ventures home">
         <img src="assets/mailman-ventures-logo.svg" alt="Mailman Ventures" />
       </a>
-      <a class="btn btn-primary" href="#contact">Submit Enquiry</a>
-    </div>
-    <nav class="nav-strip" aria-label="Primary">
-      <div class="container">
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">
-          <span class="visually-hidden">Menu</span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
+
+      <nav class="main-nav" aria-label="Primary">
         <ul class="nav-links" id="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#criteria">Criteria</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary" href="#contact">Submit Enquiry</a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+          <span class="visually-hidden">Menu</span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </div>
-    </nav>
+    </div>
   </header>
 
   <main id="main">
@@ -58,7 +65,11 @@
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container hero-content">
         <p class="eyebrow eyebrow-light">Brisbane &mdash; Private Investment Firm</p>
-        <h1>A private investment firm established from a billion dollar technology enterprise.</h1>
+        <h1>
+          <span class="line">A private investment firm</span>
+          <span class="line">established from a billion</span>
+          <span class="line">dollar technology enterprise.</span>
+        </h1>
         <p class="hero-sub">We are people-first and results driven. We are proud operators who build exceptional businesses.</p>
       </div>
       <a href="#about" class="scroll-cue" aria-label="Scroll to About Us">
@@ -94,20 +105,19 @@
     <!-- About -->
     <section class="section reveal" id="about">
       <div class="container">
-        <p class="eyebrow"><span class="eyebrow-index">01</span> About</p>
+        <p class="eyebrow">About Us</p>
         <h2 class="section-heading">About Us</h2>
-        <p class="section-intro">Mailman Ventures is a Brisbane-based private investment firm that invests its own capital. We partner with business owners for the long term and bring hands-on operating experience to every investment.</p>
+        <p class="section-statement">Mailman Ventures is a Brisbane-based private investment firm that invests its own capital. We partner with business owners for the long term and bring hands-on operating experience to every investment.</p>
       </div>
     </section>
 
     <!-- Criteria -->
     <section class="section section-alt reveal" id="criteria">
       <div class="container">
-        <p class="eyebrow"><span class="eyebrow-index">02</span> Criteria</p>
+        <p class="eyebrow">Criteria</p>
         <h2 class="section-heading">The Criteria</h2>
         <div class="criteria-columns">
           <div class="criteria-col">
-            <span class="criteria-tag">01</span>
             <h3>Target Profiles</h3>
             <p>We look for real upside potential, targeting early-to-growth and lower-to-mid market businesses as well as commercial and residential real estate. If there is a path to success, we are interested.</p>
             <ul>
@@ -117,7 +127,6 @@
             </ul>
           </div>
           <div class="criteria-col">
-            <span class="criteria-tag">02</span>
             <h3>Our Approach</h3>
             <p>Our strength is in scaling operations and building global platforms across multiple industries. We are more than just passive capital.</p>
             <ul>
@@ -134,41 +143,41 @@
     <!-- Active Portfolio -->
     <section class="section reveal" id="portfolio">
       <div class="container">
-        <p class="eyebrow"><span class="eyebrow-index">03</span> Portfolio</p>
+        <p class="eyebrow">Portfolio</p>
         <h2 class="section-heading">Active Portfolio</h2>
-        <div class="portfolio-grid">
-          <div class="tile">
-            <span class="tile-index">01</span>
+        <div class="portfolio-list">
+          <div class="portfolio-row">
+            <span class="portfolio-index">01</span>
             <h3>Commercial Real Estate</h3>
             <p>Income-producing commercial property held for the long term</p>
           </div>
-          <div class="tile">
-            <span class="tile-index">02</span>
+          <div class="portfolio-row">
+            <span class="portfolio-index">02</span>
             <h3>Residential Real Estate</h3>
             <p>Residential property held for long-term growth</p>
           </div>
-          <div class="tile">
-            <span class="tile-index">03</span>
+          <div class="portfolio-row">
+            <span class="portfolio-index">03</span>
             <h3>Property Services</h3>
             <p>Mortgage broking, real estate agencies and rent rolls</p>
           </div>
-          <div class="tile">
-            <span class="tile-index">04</span>
+          <div class="portfolio-row">
+            <span class="portfolio-index">04</span>
             <h3>Health Tech</h3>
             <p>Hardware and software improving health and performance outcomes</p>
           </div>
-          <div class="tile">
-            <span class="tile-index">05</span>
+          <div class="portfolio-row">
+            <span class="portfolio-index">05</span>
             <h3>Fitness</h3>
             <p>Direct-to-consumer fitness brands built for global scale</p>
           </div>
-          <div class="tile">
-            <span class="tile-index">06</span>
+          <div class="portfolio-row">
+            <span class="portfolio-index">06</span>
             <h3>Financial Services</h3>
             <p>Tailored debt solutions across a range of needs</p>
           </div>
-          <div class="tile">
-            <span class="tile-index">07</span>
+          <div class="portfolio-row">
+            <span class="portfolio-index">07</span>
             <h3>Venture Capital</h3>
             <p>Early-stage positions in emerging technology</p>
           </div>
@@ -176,55 +185,52 @@
       </div>
     </section>
 
-    <!-- CTA band -->
-    <section class="cta-band reveal">
-      <div class="container">
-        <p class="cta-band-text">We back the people doing the building &mdash; with capital, operating experience and no fixed exit timeline.</p>
-      </div>
-    </section>
-
     <!-- Contact -->
     <section class="section section-alt reveal" id="contact">
-      <div class="container">
-        <p class="eyebrow"><span class="eyebrow-index">04</span> Contact</p>
-        <h2 class="section-heading">Contact Us</h2>
-        <p class="section-intro contact-intro">Speak with a real person at Mailman Ventures about your business.</p>
+      <div class="container contact-grid">
+        <div class="contact-intro-col">
+          <p class="eyebrow">Contact</p>
+          <h2 class="section-heading">Contact Us</h2>
+          <p class="section-intro">Speak with a real person at Mailman Ventures about your business.</p>
+        </div>
 
-        <form id="enquiry-form" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
-          <input type="hidden" name="form-name" value="enquiry" />
-          <p class="visually-hidden">
-            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-          </p>
+        <div class="contact-form-col">
+          <form id="enquiry-form" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+            <input type="hidden" name="form-name" value="enquiry" />
+            <p class="visually-hidden">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
 
-          <div class="form-grid">
-            <div class="form-field">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required />
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-field full">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-field full">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required></textarea>
+              </div>
+              <div class="form-field full">
+                <label for="attachment">Attachment <span class="hint">(optional, max 8MB)</span></label>
+                <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.png,.jpg" />
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary form-submit">Submit Enquiry</button>
+              </div>
             </div>
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-field full">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required />
-            </div>
-            <div class="form-field full">
-              <label for="description">Description</label>
-              <textarea id="description" name="description" required></textarea>
-            </div>
-            <div class="form-field full">
-              <label for="attachment">Attachment <span class="hint">(optional, max 8MB)</span></label>
-              <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.png,.jpg" />
-            </div>
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary form-submit">Submit Enquiry</button>
-            </div>
+          </form>
+
+          <div class="form-success" id="form-success" hidden>
+            <p>Thank you. We have received your enquiry and will be in touch shortly.</p>
           </div>
-        </form>
-
-        <div class="form-success" id="form-success" hidden>
-          <p>Thank you. We have received your enquiry and will be in touch shortly.</p>
         </div>
       </div>
     </section>
