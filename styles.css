@@ -16,7 +16,7 @@
   --max-width: 1200px;
   --gutter: 24px;
 
-  --section-padding: 104px;
+  --section-padding: 72px;
   --transition-fast: 0.2s ease;
   --transition-medium: 0.6s ease;
 }
@@ -296,16 +296,23 @@ body.loaded {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 980px;
+  max-width: 1080px;
   padding: calc(var(--header-height) + 64px) 0 110px;
 }
 
 .hero h1 {
-  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.01em;
   margin-bottom: 32px;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .hero h1 {
+    white-space: normal;
+  }
 }
 
 .hero h1 .line {
@@ -438,7 +445,7 @@ body.loaded {
   font-size: clamp(2rem, 3.2vw, 2.6rem);
   font-weight: 500;
   letter-spacing: -0.01em;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .section-intro {
@@ -464,7 +471,7 @@ body.loaded {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 .criteria-columns::before {
@@ -519,7 +526,7 @@ body.loaded {
 
 /* ===== Portfolio ===== */
 .portfolio-statement {
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 .portfolio-list {
@@ -723,7 +730,7 @@ body.loaded {
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
   :root {
-    --section-padding: 80px;
+    --section-padding: 60px;
   }
 
   .criteria-columns {
@@ -774,7 +781,7 @@ body.loaded {
 
 @media (max-width: 640px) {
   :root {
-    --section-padding: 64px;
+    --section-padding: 48px;
     --header-height: 64px;
     --gutter: 16px;
   }
