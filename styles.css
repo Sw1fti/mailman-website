@@ -396,7 +396,7 @@ body.loaded {
 /* ===== Proof strip ===== */
 .proof-strip {
   background: var(--white);
-  padding: 64px 0;
+  padding: var(--section-padding) 0;
   border-top: 1px solid var(--light-grey);
   border-bottom: 1px solid var(--light-grey);
 }
