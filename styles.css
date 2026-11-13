@@ -280,7 +280,7 @@ body.loaded {
   inset: 0;
   z-index: 0;
   background: linear-gradient(160deg, #0c1d3c 0%, #173462 55%, #0a1730 100%);
-  opacity: 0.68;
+  opacity: 0.82;
   mix-blend-mode: multiply;
 }
 
@@ -294,7 +294,7 @@ body.loaded {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(180deg, rgba(10, 20, 45, 0.25) 0%, rgba(10, 20, 45, 0.45) 55%, rgba(6, 13, 30, 0.78) 100%);
+  background: linear-gradient(180deg, rgba(10, 20, 45, 0.35) 0%, rgba(10, 20, 45, 0.55) 55%, rgba(6, 13, 30, 0.85) 100%);
 }
 
 .hero-content {
