@@ -410,13 +410,14 @@ body.loaded {
 .proof-item {
   flex: 1 1 0;
   text-align: center;
-  padding: 0 40px;
+  padding: 0 16px;
 }
 
 .proof-divider {
   flex: 0 0 auto;
   width: 1px;
   height: 48px;
+  margin: 0 32px;
   background: var(--light-grey);
 }
 
@@ -429,9 +430,10 @@ body.loaded {
 }
 
 .proof-label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--grey);
   line-height: 1.5;
+  white-space: nowrap;
 }
 
 /* ===== Section generic ===== */
@@ -766,6 +768,10 @@ body.loaded {
 
   .proof-item {
     flex: 1 1 45%;
+  }
+
+  .proof-label {
+    white-space: normal;
   }
 
   .proof-divider {
