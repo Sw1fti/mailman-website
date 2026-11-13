@@ -512,8 +512,20 @@ body.loaded {
 }
 
 .criteria-col li {
+  position: relative;
+  padding-left: 28px;
   color: var(--black);
   line-height: 1.6;
+}
+
+.criteria-col li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 16px;
+  height: 1px;
+  background: var(--blue);
 }
 
 /* ===== Portfolio ===== */
