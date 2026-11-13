@@ -299,7 +299,7 @@ body.loaded {
   position: relative;
   z-index: 1;
   max-width: 1080px;
-  padding: calc(var(--header-height) + 64px) 0 110px;
+  padding: calc(var(--header-height) + 24px) 0 150px;
 }
 
 .hero h1 {
@@ -808,7 +808,7 @@ body.loaded {
   }
 
   .hero-content {
-    padding: calc(var(--header-height) + 48px) 0 80px;
+    padding: calc(var(--header-height) + 24px) 0 104px;
   }
 
   .hero h1 {
